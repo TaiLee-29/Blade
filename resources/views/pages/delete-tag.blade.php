@@ -4,5 +4,5 @@
 
 @section('content')
 
-    <a href="list-tags.php">List-Categories</a>
+    <a href="list-tags.php">List-tags</a>
 @endsection
