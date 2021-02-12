@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54375140a4484e5e36b27204d85dd353",
+    "content-hash": "e8e29c81f4f82ebac37ceefcdc7b8750",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -946,16 +946,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.45.0",
+            "version": "2.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "e2ba3174ce869da1713c38340dbb36572dfacd5a"
+                "reference": "528783b188bdb853eb21239b1722831e0f000a8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/e2ba3174ce869da1713c38340dbb36572dfacd5a",
-                "reference": "e2ba3174ce869da1713c38340dbb36572dfacd5a",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/528783b188bdb853eb21239b1722831e0f000a8d",
+                "reference": "528783b188bdb853eb21239b1722831e0f000a8d",
                 "shasum": ""
             },
             "require": {
@@ -1035,7 +1035,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-07T21:35:59+00:00"
+            "time": "2021-02-11T18:30:17+00:00"
         },
         {
             "name": "psr/container",
@@ -3355,6 +3355,62 @@
             "time": "2021-01-27T10:15:41+00:00"
         },
         {
+            "name": "twbs/bootstrap",
+            "version": "v5.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "63f3d939eaceeb84dcc77a7392953bcc8c5bc0a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/63f3d939eaceeb84dcc77a7392953bcc8c5bc0a3",
+                "reference": "63f3d939eaceeb84dcc77a7392953bcc8c5bc0a3",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                },
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com/",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v5.0.0-beta1"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/bootstrap",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-12-07T16:18:16+00:00"
+        },
+        {
             "name": "voku/portable-ascii",
             "version": "1.5.6",
             "source": {
@@ -3432,7 +3488,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "twbs/bootstrap": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
