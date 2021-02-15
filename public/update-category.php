@@ -18,5 +18,7 @@ if(isset($_POST['hiden']))
     $category->slug = $_POST['slug'];
     $category->save();
 
+    header('Location: list-categories.php');
+
 }
 

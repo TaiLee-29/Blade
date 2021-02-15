@@ -9,8 +9,12 @@ $category= \Hillel\Model\Category::find($_POST['id']);
 echo $blade->make('pages/delete-category',['category'=>$category])->render();
 
 
-//    $category= \Hillel\Model\Category::find($_POST['id']);
-     $category->delete();
+
+
+    $category->delete();
+header('Location: list-categories.php');
+
+
 
 
 

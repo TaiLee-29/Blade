@@ -17,5 +17,6 @@ if(isset($_POST['hiden']))
     $tag->title = $_POST['title'];
     $tag->slug = $_POST['slug'];
     $tag->save();
+    header('Location: list-tags.php');
 
 }

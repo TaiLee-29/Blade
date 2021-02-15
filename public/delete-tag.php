@@ -9,5 +9,6 @@ $tag= \Hillel\Model\Tag::find($_POST['id']);
 echo $blade->make('pages/delete-tag',['tag'=>$tag])->render();
 
 
-//    $category= \Hillel\Model\Category::find($_POST['id']);
+
 $tag->delete();
+header('Location: list-tags.php');

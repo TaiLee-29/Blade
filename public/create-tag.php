@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $bi->title = $_POST['title'];
     $bi->slug = $_POST['slug'];
     $bi->save();
+    header('Location: list-tags.php');
 
 }
 
