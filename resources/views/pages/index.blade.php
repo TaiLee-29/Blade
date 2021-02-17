@@ -3,8 +3,8 @@
 @section('title', 'Homepage')
 
 @section('content')
-    <h1>Homepage</h1>
 
+    <h1>Categories</h1>
     @foreach($categories as $category)
         <table class="table" align="left" width="1000" border="2" bgcolor="silver">
             <tr>
@@ -24,6 +24,8 @@
             </tr>
         </table>
     @endforeach
+
+    <h1>Tags</h1>
 
     @foreach($tags as $tag)
         <table class="table" align="left" width="1000" border="2" bgcolor="silver">

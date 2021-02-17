@@ -39,13 +39,14 @@
     <div class="bg-light p-5 rounded mt-3">
         <h1>Bottom Navbar example</h1>
         <p class="lead">HomeWork by Daniil Danilyuk</p>
-        <a class="btn btn-lg btn-primary" href=index.php" role="button">List</a>
+        <a class="btn btn-lg btn-primary" href="/" role="button">List</a>
     </div>
-    @yield('content')
+    <div> @yield('content')</br> </br></div>
+    <div></div>
 </main>
 <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Homepage</a>
+        <a class="navbar-brand" href="/">Homepage</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,10 +54,10 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="list-tags.php">Tags</a>
+                    <a class="nav-link" href="/tag/list">Tags</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="list-categories.php">Categories</a>
+                    <a class="nav-link" href="/category/list">Categories</a>
                 </li>
 
                     </ul>

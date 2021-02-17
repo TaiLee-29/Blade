@@ -5,7 +5,7 @@
 @section('content')
     <h1>New Tag</h1>
     <br><br>
-    <form action="create-tag.php" method="post" >
+    <form action="/tag/create" method="post" >
 
         <label for="title">Title</label>
         <input type="text" name="title" id="title" >
@@ -14,5 +14,5 @@
         <br><br>
         <input type="submit" >
     </form>
-    <a href="list-tags.php">List-Tags</a>
+    <a href="/tag/list">List-Tags</a>
 @endsection
