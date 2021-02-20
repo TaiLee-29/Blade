@@ -1,10 +1,15 @@
 @extends('layout1')
 
-@section('title', 'Homepage')
+@section('title', 'Category')
 
 @section('content')
     <h1>List of categories</h1>
-
+    @if(isset($_SESSION['message']))
+        <div class="alert alert-success" role="alert">
+         <p> {{$_SESSION['message']['text']}}</p>
+        </div>
+    @endif
+    @unset($_SESSION['message'])
     <a href="/category/create">Create</a>
     <div>
     @foreach($categories as $category)

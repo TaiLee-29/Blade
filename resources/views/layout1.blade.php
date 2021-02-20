@@ -37,7 +37,7 @@
 
 <main class="container">
     <div class="bg-light p-5 rounded mt-3">
-        <h1>Bottom Navbar example</h1>
+        <h1>8///6///4///2///ручка - ...</h1>
         <p class="lead">HomeWork by Daniil Danilyuk</p>
         <a class="btn btn-lg btn-primary" href="/" role="button">List</a>
     </div>

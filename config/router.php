@@ -21,18 +21,18 @@ function router(){
 
 }
 //Categories
-$router->get('/','Hillel\Controller\HomeController@home');
-$router->get('/category/create','Hillel\Controller\HomeController@createC');
-$router->post('/category/create','Hillel\Controller\HomeController@storeC');
-$router->get('/category/{id}/update','Hillel\Controller\HomeController@updateC');
-$router->post('/category/{id}/update','Hillel\Controller\HomeController@editC');
-$router->post('/category/{id}/delete','Hillel\Controller\HomeController@destroyC');
-$router->get('/category/list','Hillel\Controller\HomeController@listC');
+$router->get('/','Hillel\Controller\CategoryController@home');
+$router->get('/category/create','Hillel\Controller\CategoryController@createC');
+$router->post('/category/create','Hillel\Controller\CategoryController@storeC');
+$router->get('/category/{id}/update','Hillel\Controller\CategoryController@updateC');
+$router->post('/category/{id}/update','Hillel\Controller\CategoryController@editC');
+$router->post('/category/{id}/delete','Hillel\Controller\CategoryController@destroyC');
+$router->get('/category/list','Hillel\Controller\CategoryController@listC');
 
 //Tags
-$router->get('/tag/list','Hillel\Controller\HomeController@listT');
-$router->get('/tag/create','Hillel\Controller\HomeController@createT');
-$router->post('/tag/create','Hillel\Controller\HomeController@storeT');
-$router->get('/tag/{id}/update','Hillel\Controller\HomeController@updateT');
-$router->post('/tag/{id}/update','Hillel\Controller\HomeController@editT');
-$router->post('/tag/{id}/delete','Hillel\Controller\HomeController@destroyT');
+$router->get('/tag/list','Hillel\Controller\TagController@listT');
+$router->get('/tag/create','Hillel\Controller\TagController@createT');
+$router->post('/tag/create','Hillel\Controller\TagController@storeT');
+$router->get('/tag/{id}/update','Hillel\Controller\TagController@updateT');
+$router->post('/tag/{id}/update','Hillel\Controller\TagController@editT');
+$router->post('/tag/{id}/delete','Hillel\Controller\TagController@destroyT');
