@@ -15,11 +15,11 @@ class HomeController
         $tags = \Hillel\Model\Tag::all();
         /** @var $blade */
 
-        return view('pages/index', ['categories' => $categories], ['tags' => $tags] );
+        return view('homepage/index', ['categories' => $categories], ['tags' => $tags] );
     }
     public function listC(){
         $categories = \Hillel\Model\Category::all();
-        return view('pages/list-categories', ['categories' => $categories]);
+        return view('category/list-categories', ['categories' => $categories]);
     }
     public function createC()
     {
@@ -29,7 +29,7 @@ class HomeController
      //  $category = \Hillel\Model\Category::all();
 
 
-        return view('pages/create-category',compact('category'));
+        return view('category/create-category',compact('category'));
 
 
     }
@@ -39,7 +39,7 @@ class HomeController
         $category= \Hillel\Model\Category::find($id);
 
 
-        return view('pages/update-category',['category'=>$category]);
+        return view('category/update-category',['category'=>$category]);
 
     }
     public function editC($id)
@@ -71,7 +71,7 @@ class HomeController
     }
     public function listT(){
     $tags = \Hillel\Model\Tag::all();
-    return view('pages/list-tags', ['tags' => $tags]);
+    return view('tag/list-tags', ['tags' => $tags]);
 }
 public function createT()
 {
@@ -81,7 +81,7 @@ public function createT()
 
 
 
-    return view('pages/create-tag',compact('tag'));
+    return view('tag/create-tag',compact('tag'));
 
 
 }
@@ -91,7 +91,7 @@ public function createT()
         $tag= \Hillel\Model\Tag::find($id);
 
 
-        return view('pages/update-tag',['tag'=>$tag]);
+        return view('tag/update-tag',['tag'=>$tag]);
 
     }
     public function editT($id)

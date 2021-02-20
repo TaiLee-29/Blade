@@ -10,7 +10,6 @@
     "illuminate/view": "^7.0",
     "illuminate/database": "^7.0",
     "illuminate/routing": "^7.24",
-    "twbs/bootstrap": "5.0.0-beta1"
+    "illuminate/validation": "^7"
   }
-
 }
