@@ -8,7 +8,9 @@
     <form  method="post" >
         @if(isset($_SESSION['errors']['title']))
             @foreach($_SESSION['errors']['title'] as $eror)
-                <p>{{ $eror }}</p>
+                <div class="alert alert-warning" role="alert">
+                    <p>{{ $error }}</p>
+                </div>
             @endforeach
         @endif
             <div class="mb-3">
@@ -17,7 +19,9 @@
             </div>
             @if(isset($_SESSION['errors']['slug']))
                 @foreach($_SESSION['errors']['slug'] as $eror)
-                    <p>{{ $eror }}</p>
+                    <div class="alert alert-warning" role="alert">
+                        <p>{{ $error }}</p>
+                    </div>
                 @endforeach
             @endif
 
@@ -30,7 +34,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
     </form>
-    <a href="/tag/list">List-Tags</a>
+    <a href="/post/list">List-Tags</a>
     @php
         unset($_SESSION['errors']);
         unset($_SESSION['data']);

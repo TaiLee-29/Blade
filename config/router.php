@@ -36,3 +36,11 @@ $router->post('/tag/create','Hillel\Controller\TagController@storeT');
 $router->get('/tag/{id}/update','Hillel\Controller\TagController@updateT');
 $router->post('/tag/{id}/update','Hillel\Controller\TagController@editT');
 $router->post('/tag/{id}/delete','Hillel\Controller\TagController@destroyT');
+
+//Posts
+$router->get('/post/list','Hillel\Controller\PostController@listP');
+$router->get('/post/create','Hillel\Controller\PostController@createP');
+$router->post('/post/create','Hillel\Controller\PostController@storeP');
+$router->get('/post/{id}/update','Hillel\Controller\PostController@updateP');
+$router->post('/post/{id}/update','Hillel\Controller\PostController@editP');
+$router->post('/post/{id}/delete','Hillel\Controller\PostController@destroyP');

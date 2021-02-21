@@ -61,9 +61,10 @@ class TagController
             'slug' => ['required', 'min:5'],
         ]);
 
-        if($eror =$validator->errors()){
-
-            $_SESSION['errors'] = $eror->toArray();
+        $error = $validator->errors();
+        if(count($error)>0){
+            $_SESSION['data'] = $data;
+            $_SESSION['errors'] = $error->toArray();
 
             return new RedirectResponse($_SERVER['HTTP_REFERER']);
         }

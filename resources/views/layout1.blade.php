@@ -59,6 +59,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/category/list">Categories</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/post/list">Posts</a>
+                </li>
 
                     </ul>
                 </li>
