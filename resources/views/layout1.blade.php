@@ -41,6 +41,7 @@
         <p class="lead">HomeWork by Daniil Danilyuk</p>
         <a class="btn btn-lg btn-primary" href="/" role="button">List</a>
     </div>
+    <div>@yield('paginator')</div>
     <div> @yield('content')</br> </br></div>
     <div></div>
 </main>

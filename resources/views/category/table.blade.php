@@ -12,7 +12,7 @@
     @unset($_SESSION['message'])
     <a href="/category/create">Create</a>
     <div>
-    @foreach($categories as $category)
+    @foreach($pages as $category)
        <table align="left" width="1000" border="2" bgcolor="silver">
             <tr>
                 <th>ID</th>
@@ -39,3 +39,5 @@
        </div>
 
 @endsection
+
+@include('paginate')

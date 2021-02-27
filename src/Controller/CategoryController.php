@@ -11,15 +11,16 @@ use Illuminate\Http\Response;
 class CategoryController
 {
     public function home()
-    {  $categories = \Hillel\Model\Category::all();
-        $tags = \Hillel\Model\Tag::all();
+    {  $pages = \Hillel\Model\Category::paginate(3);
+        $link_main="";
         /** @var $blade */
 
-        return view('homepage/index', ['categories' => $categories], ['tags' => $tags] );
+        return view('homepage/index', compact('pages','link_main') );
     }
     public function listC(){
-        $categories = \Hillel\Model\Category::all();
-        return view('category/table', ['categories' => $categories]);
+        $pages = \Hillel\Model\Category::paginate(3);
+        $link_main="/category/list";
+        return view('category/table', compact('pages','link_main'));
     }
     public function createC()
     {

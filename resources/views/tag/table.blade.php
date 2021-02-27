@@ -10,7 +10,7 @@
         </div>
     @endif
     <a href="/tag/create">Create</a>
-    @foreach($tags as $tag)
+    @foreach($pages as $page)
         <table align="left" width="1000" border="2" bgcolor="silver" class="table">
             <tr>
                 <th>ID</th>
@@ -20,15 +20,17 @@
                 <th>Updated-at</th>
             </tr>
             <tr>
-                <td>{{$tag->id}}</td>
-                <td>{{$tag->title}}</td>
-                <td>{{$tag->slug}}</td>
-                <td>{{$tag->created_at}}</td>
-                <td>{{$tag->updated_at}}</td><td><form action="/tag/{{$tag->id}}/update" >
-                        <input type="submit" value="update" ></form></td><td><form action="/tag/{{$tag->id}}/delete" method="post">
+                <td>{{$page->id}}</td>
+                <td>{{$page->title}}</td>
+                <td>{{$page->slug}}</td>
+                <td>{{$page->created_at}}</td>
+                <td>{{$page->updated_at}}</td><td><form action="/tag/{{$page->id}}/update" >
+                        <input type="submit" value="update" ></form></td><td><form action="/tag/{{$page->id}}/delete" method="post">
                         <input type="submit" value="delete" ></form></td>
             </tr>
         </table>
     @endforeach
     @unset($_SESSION['message'])
 @endsection
+
+@include('paginate')

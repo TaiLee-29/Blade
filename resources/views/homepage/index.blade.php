@@ -4,44 +4,27 @@
 
 @section('content')
 
+
     <h1>Categories</h1>
-    @foreach($categories as $category)
-        <table class="table" align="left" width="1000" border="2" bgcolor="silver">
+    @foreach($pages as $page)
+        <table align="left" width="1000" border="2" bgcolor="silver">
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Title</th>
-                <th scope="col">Slug</th>
-                <th scope="col">Created-at</th>
-                <th scope="col">Updated-at</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Slug</th>
+                <th>Created-at</th>
+                <th>Updated-at</th>
             </tr>
 
-            <td>{{$category->id}}</td>
+            <td>{{$page->id}}</td>
 
-            <td>{{$category->title}}</td>
-            <td>{{$category->slug}}</td>
-            <td>{{$category->created_at}}</td>
-            <td>{{$category->updated_at}}</td>
-            </tr>
-        </table>
-    @endforeach
+            <td>{{$page->title}}</td>
+            <td>{{$page->slug}}</td>
+            <td>{{$page->created_at}}</td>
+            <td>{{$page->updated_at}}</td><td><form action="/category/{{$page->id}}/update" >
+                    <input type="submit" value="update" ></form></td><td><form action="/category/{{$page->id}}/delete" method="post">
 
-    <h1>Tags</h1>
-
-    @foreach($tags as $tag)
-        <table class="table" align="left" width="1000" border="2" bgcolor="silver">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Title</th>
-                <th scope="col">Slug</th>
-                <th scope="col">Created-at</th>
-                <th scope="col">Updated-at</th>
-            </tr>
-            <tr>
-                <td>{{$tag->id}}</td>
-                <td>{{$tag->title}}</td>
-                <td>{{$tag->slug}}</td>
-                <td>{{$tag->created_at}}</td>
-                <td>{{$tag->updated_at}}</td>
+                    <input type="submit" value="delete" ></form></td>
             </tr>
         </table>
     @endforeach
@@ -52,3 +35,5 @@
         <script src="/example.js"></script>
     @endpush
 @endsection
+
+@include('paginate')

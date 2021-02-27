@@ -12,8 +12,9 @@ use Illuminate\Http\Response;
 class TagController
 {
     public function listT(){
-        $tags = \Hillel\Model\Tag::all();
-        return view('tag/table', ['tags' => $tags]);
+        $pages = \Hillel\Model\Tag::paginate(3);
+        $link_main="/tag/list";
+        return view('tag/table', compact('pages','link_main'));
     }
     public function createT()
     {

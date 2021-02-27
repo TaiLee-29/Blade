@@ -14,8 +14,9 @@ class PostController
 
 {
     public function listP(){
-        $posts = \Hillel\Model\Post::all();
-        return view('post/table', ['posts' => $posts]);
+        $pages = \Hillel\Model\Post::paginate(3);
+        $link_main="/post/list";
+        return view('post/table', compact('pages','link_main'));
     }
     public function createP()
     {
